@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Ioasys</string>
+    <string name="textViewWelcomeLogin">BEM-VINDO AO\nEMPRESAS</string>
+    <string name="textViewDetailsLogin">Lorem ipsum dolor sit amet, contetur\nadipiscing elit. Nunc accumsan.</string>
+    <string name="buttonEnterLogin">ENTRAR</string>
+    <string name="hintEmailLogin">E-mail</string>
+    <string name="hintPasswordLogin">Senha</string>
 </resources>
