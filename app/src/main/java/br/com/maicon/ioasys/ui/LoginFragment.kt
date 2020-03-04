@@ -26,8 +26,11 @@ class LoginFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         buttonEnter.setOnClickListener {
-            findNavController().navigate(LoginFragmentDirections.actionLoginFragmentToHomeFragment())
-        }
-    }
 
+            findNavController().navigate(LoginFragmentDirections.actionLoginFragmentToHomeFragment())
+
+
+        }
+
+    }
 }
