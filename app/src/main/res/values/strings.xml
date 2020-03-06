@@ -5,6 +5,8 @@
     <string name="buttonEnterLogin">ENTRAR</string>
     <string name="hintEmailLogin">E-mail</string>
     <string name="hintPasswordLogin">Senha</string>
+    <string name="emptyFieldError">Campo vazio</string>
+    <string name="invalidMail">E-mail inválido</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
