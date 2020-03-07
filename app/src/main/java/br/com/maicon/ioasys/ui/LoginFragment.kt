@@ -1,18 +1,26 @@
 package br.com.maicon.ioasys.ui
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.widget.doAfterTextChanged
 import androidx.navigation.fragment.findNavController
-
 import br.com.maicon.ioasys.R
-import kotlinx.android.synthetic.main.activity_main.*
+import br.com.maicon.ioasys.app.BaseFragment
+import br.com.maicon.ioasys.presentation.LoginViewModel
 import kotlinx.android.synthetic.main.fragment_login.*
+import org.koin.androidx.viewmodel.ext.android.viewModel
 
 
-class LoginFragment : Fragment() {
+class LoginFragment : BaseFragment() {
+
+    private val viewModel: LoginViewModel by viewModel()
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        observeEvents()
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -26,11 +34,35 @@ class LoginFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         buttonEnter.setOnClickListener {
-
-            findNavController().navigate(LoginFragmentDirections.actionLoginFragmentToHomeFragment())
-
-
+            viewModel.onLogin(
+                editTextEmail.text.toString(),
+                editTextPassword.text.toString()
+            )
         }
+    }
 
+    private fun observeEvents() {
+        viewModel.getLoginState().onPostValue(this,
+            onSuccess = {
+                findNavController().navigate(LoginFragmentDirections.actionLoginFragmentToHomeFragment())
+            },
+            onError = {
+                textViewError.visibility = View.VISIBLE
+                textViewError.text = it.message
+            })
+        viewModel.getMailState().onPostValue(this,
+            onSuccess = {
+                textInputEmail.error = null
+            },
+            onError = {
+                textInputEmail.error = it.message
+            })
+        viewModel.getPasswordState().onPostValue(this,
+            onSuccess = {
+                textInputPassword.error = null
+            },
+            onError = {
+                textInputPassword.error = it.message
+            })
     }
 }
