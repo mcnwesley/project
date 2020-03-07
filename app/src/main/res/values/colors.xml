@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#EE4C77</color>
+    <color name="colorPrimaryDark">#3B000000</color>
+    <color name="colorAccent">#EE4C77</color>
+    <color name="background">#EBE9d7</color>
+    <color name="textViewWelcome">#383743</color>
+    <color name="buttonEnterBackground">#57bbbc</color>
+    <color name="buttonEnterBackgroundError">#748383</color>
+    <color name="buttonEnterText">#ffffff</color>
+    <color name="textViewMessageError">#ff0f44</color>
+</resources>

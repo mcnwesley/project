@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Ioasys</string>
+    <string name="textViewWelcomeLogin">BEM-VINDO AO\nEMPRESAS</string>
+    <string name="textViewDetailsLogin">Lorem ipsum dolor sit amet, contetur\nadipiscing elit. Nunc accumsan.</string>
+    <string name="buttonEnterLogin">ENTRAR</string>
+    <string name="hintEmailLogin">E-mail</string>
+    <string name="hintPasswordLogin">Senha</string>
+    <string name="emptyFieldError">Campo vazio</string>
+    <string name="invalidMail">E-mail inválido</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
