@@ -4,6 +4,7 @@ import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LifecycleObserver
 import br.com.maicon.ioasys.R
+import br.com.maicon.ioasys.data.LoginModel
 import br.com.maicon.ioasys.utils.extensions.*
 import org.koin.core.KoinComponent
 
@@ -18,8 +19,8 @@ class LoginViewModel(application: Application) : AndroidViewModel(application), 
     fun getMailState() = mailState.asLiveData()
     fun getPasswordState() = passwordState.asLiveData()
 
-    fun onLogin(mail: String, password: String) {
-        if (validateForm(mail, password)) {
+    fun onLogin(loginModel : LoginModel) {
+        if (validateForm(loginModel.mail, loginModel.password)) {
             loginState.postSuccess(Unit)
         }else{
             loginState.postError("ERRROR")

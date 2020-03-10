@@ -8,6 +8,7 @@ import androidx.core.widget.doAfterTextChanged
 import androidx.navigation.fragment.findNavController
 import br.com.maicon.ioasys.R
 import br.com.maicon.ioasys.app.BaseFragment
+import br.com.maicon.ioasys.data.LoginModel
 import br.com.maicon.ioasys.presentation.LoginViewModel
 import kotlinx.android.synthetic.main.fragment_login.*
 import org.koin.androidx.viewmodel.ext.android.viewModel
@@ -35,8 +36,10 @@ class LoginFragment : BaseFragment() {
 
         buttonEnter.setOnClickListener {
             viewModel.onLogin(
-                editTextEmail.text.toString(),
-                editTextPassword.text.toString()
+                LoginModel(
+                    editTextEmail.text.toString(),
+                    editTextPassword.text.toString()
+                )
             )
         }
     }
