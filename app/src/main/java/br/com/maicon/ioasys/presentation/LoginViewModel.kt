@@ -4,7 +4,7 @@ import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LifecycleObserver
 import br.com.maicon.ioasys.R
-import br.com.maicon.ioasys.data.LoginModel
+import br.com.maicon.ioasys.data.model.LoginModel
 import br.com.maicon.ioasys.utils.extensions.*
 import org.koin.core.KoinComponent
 

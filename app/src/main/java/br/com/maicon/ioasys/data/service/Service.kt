@@ -1,7 +1,7 @@
 package br.com.maicon.ioasys.data.service
 
-import br.com.maicon.ioasys.data.LoginModel
-import br.com.maicon.ioasys.data.SignInResponse
+import br.com.maicon.ioasys.data.model.LoginModel
+import br.com.maicon.ioasys.data.model.SignInResponse
 import retrofit2.http.Body
 import retrofit2.http.POST
 
