@@ -4,5 +4,5 @@ import br.com.maicon.ioasys.data.repository.LoginRepository
 import org.koin.dsl.module
 
 val repositoryModule = module {
-    factory { LoginRepository() }
+    factory { LoginRepository(get()) }
 }

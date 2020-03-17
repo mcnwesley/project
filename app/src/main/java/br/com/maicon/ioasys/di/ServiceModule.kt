@@ -6,5 +6,5 @@ import org.koin.dsl.module
 
 
 val serviceModule = module {
-    single { ServiceFactory.createClient(BASE_URL, okHttpClient = get(), adapter = get()) }
+    single { ServiceFactory.createClient(BASE_URL) }
 }

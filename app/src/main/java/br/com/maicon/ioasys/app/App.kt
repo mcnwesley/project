@@ -1,6 +1,7 @@
 package br.com.maicon.ioasys.app
 
 import android.app.Application
+import br.com.maicon.ioasys.di.interactorModule
 import br.com.maicon.ioasys.di.presentationModule
 import br.com.maicon.ioasys.di.repositoryModule
 import br.com.maicon.ioasys.di.serviceModule
@@ -15,7 +16,8 @@ class App : Application() {
                 listOf(
                     presentationModule,
                     serviceModule,
-                    repositoryModule
+                    repositoryModule,
+                    interactorModule
                 )
             ).androidContext(applicationContext)
         }

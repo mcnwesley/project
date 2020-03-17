@@ -10,8 +10,6 @@ data class SignInResponse(
     val enterprise: String?,
 
     @SerializedName("success")
-    val success: Boolean?,
+    val success: Boolean = false
 
-    @SerializedName("errors")
-    val errors: String?
 )

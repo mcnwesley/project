@@ -35,10 +35,8 @@ class LoginFragment : BaseFragment() {
 
         buttonEnter.setOnClickListener {
             viewModel.onLogin(
-                LoginModel(
-                    editTextEmail.text.toString(),
-                    editTextPassword.text.toString()
-                )
+                editTextEmail.text.toString(),
+                editTextPassword.text.toString()
             )
         }
     }

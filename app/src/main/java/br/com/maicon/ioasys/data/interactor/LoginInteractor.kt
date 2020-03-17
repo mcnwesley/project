@@ -1,6 +1,5 @@
 package br.com.maicon.ioasys.data.interactor
 
-import br.com.maicon.ioasys.data.Response
 import br.com.maicon.ioasys.data.model.SignInResponse
 import br.com.maicon.ioasys.data.repository.LoginRepository
 import br.com.maicon.ioasys.utils.ThreadContextProvider
@@ -14,7 +13,7 @@ class LoginInteractor(
     private val scope: CoroutineScope
 ) {
 
-    fun signIn(mail: String, password: String, result: (Response<SignInResponse>) -> Unit) {
+    fun signIn(mail: String, password: String, result: (SignInResponse) -> Unit) {
         scope.launch(contextProvider.io) {
             val response = loginRepository.signIn(mail, password)
             withContext(contextProvider.main) {
