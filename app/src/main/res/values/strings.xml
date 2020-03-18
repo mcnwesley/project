@@ -9,6 +9,9 @@
     <string name="invalidMail">E-mail inválido</string>
     <string name="mensagemStart">Clique na busca para iniciar.</string>
     <string name="searchHint">Pesquisar</string>
+    <string name="company">Empresa1</string>
+    <string name="business">Negócio</string>
+    <string name="country">Brasil</string>
 
 
     <!-- TODO: Remove or change this placeholder text -->
