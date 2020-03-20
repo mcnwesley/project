@@ -7,8 +7,8 @@
     tools:context=".ui.detail.DetailsFragment">
 
     <include
-        android:id="@+id/toolbarDetailsCompany"
-        layout="@layout/toolbar_details_company" />
+        android:id="@+id/toolbarDetailsEnterprise"
+        layout="@layout/toolbar_details" />
 
     <ScrollView
         android:id="@+id/scrollViewDetails"
@@ -17,7 +17,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/toolbarDetailsCompany">
+        app:layout_constraintTop_toBottomOf="@id/toolbarDetailsEnterprise">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -31,7 +31,7 @@
                 android:layout_marginTop="25dp"
                 android:layout_marginEnd="20dp"
                 android:scaleType="centerCrop"
-                android:src="@drawable/company_details"
+                android:src="@drawable/enterprise_image_details"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />

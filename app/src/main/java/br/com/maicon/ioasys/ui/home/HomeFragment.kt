@@ -30,9 +30,16 @@ class HomeFragment : BaseFragment(), OnItemClickListener<String> {
 
         setupView()
         setupRecyclerView()
+
+    }
+
+    override fun onStop() {
+        super.onStop()
+        searchView.isIconified = true
     }
 
     private fun setupView() {
+
         searchView.setOnSearchClickListener {
             imageViewIoasysHome.visibility = View.GONE
             searchView.maxWidth = Integer.MAX_VALUE
@@ -51,14 +58,20 @@ class HomeFragment : BaseFragment(), OnItemClickListener<String> {
     private fun setupRecyclerView() {
         adapter = EnterpriseAdapter(
             mutableListOf(
-                "Google", "Facebook", "Insta", "Limão", "Jiló", "Figo", "Banana", "Maça", "Pineapple"
+                "Google",
+                "Facebook",
+                "Insta",
+                "Limão",
+                "Jiló",
+                "Figo",
+                "Banana",
+                "Maça",
+                "Pineapple"
             ), this
         )
         recyclerViewList.adapter = adapter
 
     }
-
-
     override fun onItemClick(item: String, position: Int) {
         findNavController().navigate(HomeFragmentDirections.actionHomeFragmentToDetailsFragment())
     }

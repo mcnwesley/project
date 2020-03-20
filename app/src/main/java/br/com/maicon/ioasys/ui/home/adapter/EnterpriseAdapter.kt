@@ -34,7 +34,7 @@ class EnterpriseAdapter(val list: MutableList<String>, val listener: OnItemClick
         fun bindItemView(item: String, onItemClick: () -> Unit) {
 
             view.apply {
-                textViewCompany.text = item
+                textViewEnterprise.text = item
                 setOnClickListener { onItemClick() }
 
             }

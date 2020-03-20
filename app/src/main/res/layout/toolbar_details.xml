@@ -7,13 +7,13 @@
     android:background="@drawable/toolbar_background">
 
     <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbarDetailsCompany"
+        android:id="@+id/toolbarDetailsEnterprise"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:contentInsetStart="0dp">
 
             <androidx.appcompat.widget.AppCompatImageView
-                android:id="@+id/imageViewArrow"
+                android:id="@+id/imageViewArrowBack"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
@@ -25,7 +25,7 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/textViewCompany"
+                android:id="@+id/textViewEnterprise"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="35dp"
@@ -36,7 +36,7 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0"
-                app:layout_constraintStart_toEndOf="@id/imageViewArrow"
+                app:layout_constraintStart_toEndOf="@id/imageViewArrowBack"
                 app:layout_constraintTop_toTopOf="parent"
                 android:text="EMPRESA1" />
 
