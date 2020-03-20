@@ -38,7 +38,7 @@
                 app:layout_constraintHorizontal_bias="0"
                 app:layout_constraintStart_toEndOf="@id/imageViewArrow"
                 app:layout_constraintTop_toTopOf="parent"
-                tools:text="EMPRESA1" />
+                android:text="EMPRESA1" />
 
     </androidx.appcompat.widget.Toolbar>
 
