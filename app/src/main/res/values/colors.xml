@@ -11,4 +11,5 @@
     <color name="textViewMessageError">#ff0f44</color>
     <color name="darkPink">#CA406B</color>
     <color name="colorBusiness">#1a0e49</color>
+    <color name="warm_grey">#8d8c8c</color>
 </resources>
