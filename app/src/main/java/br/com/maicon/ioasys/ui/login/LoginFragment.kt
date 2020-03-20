@@ -1,10 +1,9 @@
-package br.com.maicon.ioasys.ui
+package br.com.maicon.ioasys.ui.login
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.core.widget.doAfterTextChanged
 import androidx.navigation.fragment.findNavController
 import br.com.maicon.ioasys.R
 import br.com.maicon.ioasys.app.BaseFragment
