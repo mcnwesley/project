@@ -1,4 +1,4 @@
-package br.com.maicon.ioasys.ui
+package br.com.maicon.ioasys.ui.login
 
 import android.os.Bundle
 import android.view.LayoutInflater
