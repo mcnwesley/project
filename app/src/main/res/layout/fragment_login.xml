@@ -127,4 +127,17 @@
         app:layout_constraintTop_toBottomOf="@+id/textViewError"
         app:layout_constraintVertical_bias="0.1" />
 
+    <ProgressBar
+        android:id="@+id/progressBarLoading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:foregroundGravity="center"
+        android:indeterminateTint="@color/buttonEnterBackground"
+        app:layout_constraintBottom_toBottomOf="@id/textInputPassword"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textInputEmail"
+        android:visibility="gone"/>
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

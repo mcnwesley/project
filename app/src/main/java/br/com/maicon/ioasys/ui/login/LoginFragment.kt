@@ -37,10 +37,13 @@ class LoginFragment : BaseFragment() {
         editTextPassword.setText("12341234")
 
         buttonEnter.setOnClickListener {
+            progressBarLoading.visibility = View.VISIBLE
+
             viewModel.onLogin(
                 editTextEmail.text.toString(),
                 editTextPassword.text.toString()
             )
+            progressBarLoading.visibility = View.GONE
         }
     }
 
@@ -52,6 +55,7 @@ class LoginFragment : BaseFragment() {
             onError = {
                 textViewError.visibility = View.VISIBLE
                 textViewError.text = it.message
+
             })
         viewModel.getMailState().onPostValue(this,
             onSuccess = {
@@ -59,6 +63,7 @@ class LoginFragment : BaseFragment() {
             },
             onError = {
                 textInputEmail.error = it.message
+
             })
         viewModel.getPasswordState().onPostValue(this,
             onSuccess = {
