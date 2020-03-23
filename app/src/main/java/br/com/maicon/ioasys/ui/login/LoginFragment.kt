@@ -33,6 +33,7 @@ class LoginFragment : BaseFragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        //remover depois
         editTextEmail.setText("testeapple@ioasys.com.br")
         editTextPassword.setText("12341234")
 
@@ -49,10 +50,18 @@ class LoginFragment : BaseFragment() {
 
     private fun observeEvents() {
         viewModel.getLoginState().onPostValue(this,
+            onLoading = {
+                buttonEnter.isEnabled = false
+                progressBarLoading.visibility = View.VISIBLE
+            },
             onSuccess = {
+                buttonEnter.isEnabled = true
+                progressBarLoading.visibility = View.GONE
                 findNavController().navigate(LoginFragmentDirections.actionLoginFragmentToHomeFragment())
             },
             onError = {
+                buttonEnter.isEnabled = true
+                progressBarLoading.visibility = View.GONE
                 textViewError.visibility = View.VISIBLE
                 textViewError.text = it.message
 
