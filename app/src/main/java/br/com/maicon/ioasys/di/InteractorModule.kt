@@ -7,5 +7,4 @@ import org.koin.dsl.module
 
 val interactorModule = module {
     factory { (scope: CoroutineScope) ->LoginInteractor(get(), get(), scope) }
-    factory { ThreadContextProvider() }
 }
