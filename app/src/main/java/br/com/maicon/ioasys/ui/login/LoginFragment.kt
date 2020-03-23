@@ -33,6 +33,9 @@ class LoginFragment : BaseFragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        editTextEmail.setText("testeapple@ioasys.com.br")
+        editTextPassword.setText("12341234")
+
         buttonEnter.setOnClickListener {
             progressBarLoading.visibility = View.VISIBLE
 

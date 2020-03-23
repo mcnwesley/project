@@ -7,6 +7,7 @@ import br.com.maicon.ioasys.R
 import br.com.maicon.ioasys.data.interactor.LoginInteractor
 import br.com.maicon.ioasys.data.model.LoginModel
 import br.com.maicon.ioasys.data.repository.LoginRepository
+import br.com.maicon.ioasys.data.utils.Result
 import br.com.maicon.ioasys.utils.extensions.*
 import org.koin.core.KoinComponent
 
@@ -27,11 +28,16 @@ class LoginViewModel(application: Application, private val loginRepository: Logi
         if (validateForm(email, password)) {
             loginState.postLoading()
             loginInteractor.signIn(email, password) {
-                if(it.success){
-                    loginState.postSuccess(Unit)
-                }
-                else{
-                    loginState.postError("ERRROR")
+                when(it){
+                    is Result.Success->{
+                        loginState.postSuccess(Unit)
+                    }
+                    is Result.Error->{
+                        loginState.postError("Credenciais informadas são inválidas, tente novamente.")
+                    }
+                    is Result.NetworkError->{
+                        loginState.postError("Sem conexão")
+                    }
                 }
             }
         }
